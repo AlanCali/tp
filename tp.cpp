@@ -60,7 +60,7 @@ void punto2(string nom_prod[],string nom_cliente[],int cod_cliente, int list_var
 
 void punto3(string nom_prod[],string nom_cliente[],int cant_entregas[][constprod], float cant_km[][constprod],int cod_cliente,int posi[],int cont_cliente[])
 {
-	int contmayor=0, nazi=0;
+	int contmayor=0;
     for(int i=1;i<cod_cliente;i++){
         if(i == pos_mayor(cont_cliente,cod_cliente)){
            contmayor+=cant_entregas[i][0];
@@ -77,10 +77,10 @@ int main()
     const int constcliente=8;
     string nombrecliente[constcliente];
     string nombreprod[constprod];
-    int entregastotal[constcliente][constprod]{0};  //indica cuantas entregas tiene cada producto.
-    int cantmayor[constcliente]{0};//cuenta la cantidad de tipos de elemento que superan los 13.000
+    int entregastotal[constcliente][constprod]{0};  
+    int cantmayor[constcliente]{0};
     int posicionamiento[constprod]{0,1,2,3,4};
-    float pesototal[constcliente][constprod]{0};//peso total de cada uno de los viajes
+    float pesototal[constcliente][constprod]{0};
     float distanciatotal[constcliente][constprod]{0};
 
     ifstream nombres;
